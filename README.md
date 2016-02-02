@@ -1,4 +1,4 @@
-# clementine-module-barcode
+# Clementine Framework : module Barcode
 
 Wrap [tc-lib-barcode library](https://github.com/tecnickcom/tc-lib-barcode) in a Clementine helper.
 

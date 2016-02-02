@@ -32,9 +32,12 @@ class barcodeBarcodeHelper extends barcodeBarcodeHelper_Parent
         return call_user_func_array(array($this->bobj, $method), $arguments);
     }
 
-    //public function getSvgCode()
-    //{
-        //return str_replace('<svg ', '<svg class="coucou" ', parent::getSvgCode());
-    //}
+    public function getResizableSvgCode($htmlAttr = "")
+    {
+        return preg_replace(
+            '/<svg width="([^"]*)" height="([^"]*)" (.*)>/',
+            '<svg ' . $htmlAttr . ' \3 viewBox="0 0 \1 \2" preserveAspectRatio="none">',
+            parent::getSvgCode());
+    }
 
 }
