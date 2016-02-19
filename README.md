@@ -14,9 +14,9 @@ echo $this->getHelper('barcode')
 ## Overriding
 
 ```php
-    // inject class="foo" in the SVG tag
-    public function getSvgCode()
-    {
-        return str_replace('<svg ', '<svg class="foo" ', parent::getSvgCode());
-    }
+// inject class="foo" in the SVG tag
+public function getSvgCode()
+{
+    return str_replace('<svg ', '<svg class="foo" ', parent::getSvgCode());
+}
 ```
