@@ -5,7 +5,8 @@ Wrap [tc-lib-barcode library](https://github.com/tecnickcom/tc-lib-barcode) in a
 ## Usage
 
 ```php
+// generate a QRCODE through a resizable SVG with "qrcode" CSS class
 echo $this->getHelper('barcode')
           ->getBarcodeObj('QRCODE', 'hello world');
-          ->getSvgCode();
+          ->getResizableSvgCode('class="qrcode"');
 ```
